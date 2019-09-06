@@ -1,168 +1,131 @@
-<style>
-        * {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            list-style-type: none;
-            text-decoration: none;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            -webkit-perspective: 2500;
         }
 
-        .top {
-            width: 70%;
-            height: 1400px;
-            border: 1px solid transparent;
-            margin: 0 auto;
-            background-color: #cccccc;
-        }
-
-        .biaot {
-            width: 800px;
-            height: 50px;
-            border: 1px solid transparent;
-            margin: 0 auto;
-            margin-top: 20px;
-            background-color: red;
-            text-align: center;
-            line-height: 50px;
-            font-size: 18px;
-            color: white;
-        }
-
-        .lbt {
-            width: 800px;
-            height: 200px;
-            border: 1px solid transparent;
-            margin: 0 auto;
-            text-align: center;
-            line-height: 200px;
-            font-size: 18px;
-            background-color: green;
-            color: white;
-        }
-
-        .dh {
-            width: 800px;
-            height: 50px;
-            border: 1px solid transparent;
-            background-color: blueviolet;
-            margin: 0 auto;
-            text-align: center;
-            line-height: 50px;
-            font-size: 18px;
-            color: white;
-        }
-
-        .xx {
-            width: 200px;
-            height: 600px;
-            border: 1px solid transparent;
-        }
-
-        .xx ul li {
-            width: 190px;
-            height: 190px;
-            border: 1px solid transparent;
-            margin-top: 20px;
-            margin-left: 70px;
-            text-align: center;
-            line-height: 190px;
-            font-size: 18px;
-            color: wheat;
-        }
-
-        .xwxx {
-            width: 596px;
-            height: 265px;
-            border: 1px solid transparent;
-            position: relative;
-            left: 275px;
-            top: -582px;
-            background-color: aquamarine;
-        }
-
-        .xwxx ul li {
-            width: 580px;
-            height: 30px;
-            border: 1px solid transparent;
-            margin-left: 7px;
-            margin-top: 10px;
-            background-color: rgb(179, 180, 180);
-            font-size: 18px;
-            text-align: center;
-            line-height: 30px;
-        }
-        .twxx{
-            width: 596px;
-            height: 265px;
-            border: 1px solid transparent;
-            position: relative;
-            left: 275px;
-            top: -565px;
-            background-color: purple;
-        }
-        .twxx ul li{
-            width: 120px;
-            height: 120px;
-            border: 1px solid transparent;
-            float: left;
-            margin-top: 7px;
-            margin-left: 22px;
-            background-color: red;
-            font-size: 18px;
-            text-align: center;
-            line-height: 120px;
-        }
-        .dibu{
-            width: 800px;
+        .box {
+            width: 300px;
             height: 300px;
             border: 1px solid transparent;
-            margin: 0 auto;
-            margin-top: -485px;
-            background-color: gray;
+            margin: 150px auto;
+            position: relative;
+            animation: ych 4s linear infinite;
+            transform-style: preserve-3d;
+        }
+
+        .box>div {
+            width: 300px;
+            height: 300px;
+            font-size: 30px;
             text-align: center;
-            line-height: 200px;
-            font-size: 18px;
-            color: white;
+            line-height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 2s linear;
+        }
+
+        .box>div:nth-of-type(1) {
+            background-color: pink;
+            transform: translateZ(-150px);
+        }
+
+        .box:hover div:nth-of-type(1) {
+            width: 500px;
+            height: 500px;
+            line-height: 500px;
+            transform: translateZ(-250px)rotateZ(90deg);
+        }
+
+        .box>div:nth-of-type(2) {
+            background-color: aqua;
+            transform: rotateY(90deg) translateZ(-150px);
+        }
+
+        .box:hover div:nth-of-type(2) {
+            width: 500px;
+            height: 500px;
+            line-height: 500px;
+            transform: rotateY(90deg)translateZ(-250px)rotateZ(90deg);
+        }
+
+        .box>div:nth-of-type(3) {
+            background-color: yellow;
+            transform: rotateY(90deg) translateZ(150px);
+        }
+
+        .box:hover div:nth-of-type(3) {
+            width: 500px;
+            height: 500px;
+            line-height: 500px;
+            transform: rotateY(90deg)translateZ(250px)rotateZ(90deg);
+        }
+
+        .box>div:nth-of-type(4) {
+            background-color: red;
+            transform: rotateX(90deg) translateZ(150px);
+        }
+
+        .box:hover div:nth-of-type(4) {
+            width: 500px;
+            height: 500px;
+            line-height: 500px;
+            transform: rotateX(90deg)translateZ(250px)rotateZ(90deg);
+        }
+
+        .box>div:nth-of-type(5) {
+            background-color: purple;
+            transform: rotateX(90deg) translateZ(-150px);
+        }
+
+        .box:hover div:nth-of-type(5) {
+            width: 500px;
+            height: 500px;
+            line-height: 500px;
+            transform: rotateX(90deg)translateZ(-250px)rotateZ(90deg);
+        }
+
+        .box>div:nth-of-type(6) {
+            background-color: palegreen;
+            transform: translateZ(150px);
+        }
+
+        .box:hover div:nth-of-type(6) {
+            width: 500px;
+            height: 500px;
+            line-height: 500px;
+            transform: translateZ(250px)rotateZ(90deg);
+        }
+
+        @keyframes ych {
+            from {
+                transform: rotateY(0deg)rotateX(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg) rotateX(360deg);
+            }
         }
     </style>
-<div class="top">
-        <div class="biaot">
-            这是表头
-        </div>
-        <div class="lbt">
-            这是轮播图
-        </div>
-        <div class="dh">
-            这是导航
-        </div>
-        <div class="xx">
-            <ul>
-                <li style="background-color: rgb(17, 153, 46);">这是栏目导航</li>
-                <li style="background-color: rgb(0, 0, 0);">这是推荐信息</li>
-                <li style="background-color: rgb(253, 0, 0);">这是联系方式</li>
-            </ul>
-        </div>
-        <div class="xwxx">
-            <ul>
-                <li></li>
-                <li></li>
-                <li>这是新闻信息列表</li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        <div class="twxx">
-            <ul>
-                <li></li>
-                <li>这是</li>
-                <li>图文</li>
-                <li></li>
-                <li></li>
-                <li>信息</li>
-                <li>列表</li>
-                <li></li>
-            </ul>
-        </div>
-        <div class="dibu">这是底部</div>
+</head>
+
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
     </div>
+</body>
+
+</html>
